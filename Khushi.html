@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>only for Khushi!</title>
+    <style>
+        body {
+            font-family: cursive;
+            margin: 0;
+            padding: 0;
+            background-color: aliceblue;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+        .content {
+            margin: 20px;
+            padding: 15px;
+            background-color: azure;
+            color: blueviolet;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: cornflowerblue;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        img {
+            max-width: 80%;
+            height: auto;
+            margin-top: 20px;
+            margin: 0 auto;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div id="contentContainer" class="content">
+        <h2>Hey Khushi! <3</h2>
+        <p>I have a question :)</p>
+    </div>
+    <button id="changeButton" onclick="changeButtonAndContent()">What is it?</button>
+    <img id="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.uJCBzWvdxA2xGElf6ZIw9wHaHa%26pid%3DApi&f=1&ipt=85b5b9b88fc2f36df8107c7f3d3e2ee7c369e92f89c83bc21ff8aa8f3ad7e789&ipo=images" alt="bild"
+         style="box-shadow: 0 0 16px white;
+                border-radius: 3px;">
+</div>
+
+<script>
+    let clickCount = 0; 
+
+    function changeButtonAndContent() {
+        clickCount++;
+        const button = document.getElementById("changeButton");
+        const contentContainer = document.getElementById("contentContainer");
+        const image = document.getElementById("image");
+        if (clickCount === 1) {
+            button.innerHTML = "I love you.";
+            contentContainer.querySelector("h2").innerHTML = "How much do you think I love you?";
+            contentContainer.querySelector("p").style.display = "none";
+        } else if (clickCount === 2) {
+            button.innerHTML = "I love you more!";
+        } else if (clickCount === 3) {
+            button.innerHTML = "I love you even more! <3";
+        } else if (clickCount === 4) {
+            button.innerHTML = "I can´t tell you in words!";
+        }
+        else if (clickCount === 5) {
+            button.style.display = "none";
+            image.style.display = "block";
+            contentContainer.querySelector("p").style.display = "block";
+            contentContainer.querySelector("p").innerHTML = "I´m not able to tell you <br>how much I love you in words,<br> but this is what comes close:<br> Every time I think of you my mood skyrockets into the positive,<br>   doesn´t matter how bad it was before.<br>Every time I get home or wake up I happily<br> check my phone for messages knowing<br> there is one from you waiting for me<br> to read it and make me smile.<br>You always make me feel special.<br>With you I feel safe.<br>I know you are always there for me<br> to help me with my problems<br> and I am really proud of you<br> especially for dealing with the difficulties<br>which you have in your life.<br><br>When long distance gets hard, <br>remember that the distance isn´t forever.<br>I want to be with you forever my love!<br>You are my everything!<br>I love you Khushi <3";
+        }
+    }
+</script>
+
+</body>
+</html>
